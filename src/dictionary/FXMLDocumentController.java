@@ -43,6 +43,9 @@ public class FXMLDocumentController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    Library x = new Library();
+    @FXML
+    private ListView<String> listHistory;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -78,7 +81,6 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void search(ActionEvent event) throws IOException {
-        Library x = new Library();
         x.readFile();
         String s = x.searchWord(inPut.getText());
         if (s == "...") {
@@ -109,6 +111,6 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void addHistory(MouseEvent event) {
+        listHistory.getItems().add(0, inPut.getText());
     }
-
 }

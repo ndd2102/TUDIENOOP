@@ -10,14 +10,19 @@
 
 <AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.AddMenuController">
    <children>
+      <ImageView fitHeight="540.0" fitWidth="779.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/1%20(2).jpg" />
+         </image>
+      </ImageView>
     <Button layoutX="500.0" layoutY="190.0" mnemonicParsing="false" onAction="#addWord" prefHeight="60.0" prefWidth="102.0" text="ADD" />
-      <Button layoutY="97.0" mnemonicParsing="false" onAction="#switchToSearchWord" prefHeight="25.0" prefWidth="60.0" text="Word" />
-      <Button layoutX="60.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToSearchText" prefHeight="25.0" prefWidth="60.0" text="Text" />
-      <Button layoutX="120.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Add">
+      <Button layoutY="97.0" mnemonicParsing="false" onAction="#switchToSearchWord" prefHeight="25.0" prefWidth="68.0" text="Word" />
+      <Button layoutX="68.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToSearchText" prefHeight="25.0" prefWidth="68.0" text="Text" />
+      <Button layoutX="136.0" layoutY="97.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="68.0" text="Add">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button layoutX="180.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToDelete" prefHeight="25.0" prefWidth="60.0" text="Delete" />
+      <Button layoutX="204.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToDelete" prefHeight="25.0" prefWidth="68.0" text="Delete" />
       <TextArea fx:id="newTranslate" layoutX="150.0" layoutY="303.0" prefHeight="200.0" prefWidth="452.0" />
       <TextField fx:id="newWord" layoutX="150.0" layoutY="190.0" prefHeight="60.0" prefWidth="310.0" />
       <ImageView fitHeight="102.0" fitWidth="779.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">

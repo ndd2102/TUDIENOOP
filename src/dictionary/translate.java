@@ -16,12 +16,13 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class translate {
+
     public static String translate(String langFrom, String langTo, String text) throws IOException {
         // INSERT YOU URL HERE
-        String urlStr = "https://script.google.com/macros/s/AKfycbwg1QHeH9sERUW_-nbfUFnHgjiLKvgpqiEi-9R_ACTK4WjJHYE/exec" +
-                "?q=" + URLEncoder.encode(text, "UTF-8") +
-                "&target=" + langTo +
-                "&source=" + langFrom;
+        String urlStr = "https://script.google.com/macros/s/AKfycbwg1QHeH9sERUW_-nbfUFnHgjiLKvgpqiEi-9R_ACTK4WjJHYE/exec"
+                + "?q=" + URLEncoder.encode(text, "UTF-8")
+                + "&target=" + langTo
+                + "&source=" + langFrom;
         URL url = new URL(urlStr);
         StringBuilder response = new StringBuilder();
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
