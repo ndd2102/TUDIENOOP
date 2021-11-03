@@ -71,7 +71,7 @@ public class Library {
     }
 
     public void writeFile() throws IOException {
-        FileWriter file = new FileWriter("aa.txt");
+        FileWriter file = new FileWriter("init.txt");
         BufferedWriter writer = new BufferedWriter(file);
         int n = key.size();
         for (int i = 0; i < n; i++) {
@@ -83,6 +83,7 @@ public class Library {
     }
 
     public int binSearch(String data) {
+        data = data.toLowerCase();
         int left = 0;
         int right = key.size() - 1;
         while (left < right) {
@@ -100,6 +101,7 @@ public class Library {
     }
 
     public String searchWord(String data) {
+        data = data.toLowerCase();
         int k = binSearch(data);
         if (k < 0) {
             return "...";
@@ -109,13 +111,20 @@ public class Library {
     }
 
     public boolean addWord(String data, String value) {
+        data = data.toLowerCase();
         int k = binSearch(data);
         if (k >= 0 || value.length() == 0) {
             return false;
         }
         k = 0;
-        while (key.get(k).compareTo(data) < 0) {
+        while (k < key.size() && key.get(k).compareTo(data) < 0) {
             k ++;
+        }
+        value = value + "\n";
+        if(value.charAt(0) == '/') {
+            value = " " + value;
+        } else {
+            value = "\n" + value;
         }
         key.add(k, data);
         translate.add(k, value);
@@ -123,6 +132,7 @@ public class Library {
     }
 
     public boolean deleteWord(String data) {
+        data = data.toLowerCase();
         int k = binSearch(data);
         if (k < 0) {
             return false;

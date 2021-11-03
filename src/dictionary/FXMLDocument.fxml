@@ -1,40 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.FXMLDocumentController">
-    <children>
-        <Button fx:id="button" layoutX="308.0" layoutY="180.0" onAction="#search" onMouseClicked="#addHistory" prefHeight="55.0" prefWidth="360.0" text="Search">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <TextField fx:id="inPut" layoutX="63.0" layoutY="178.0" prefHeight="55.0" prefWidth="200.0" />
-      <TextArea fx:id="outPut" layoutX="311.0" layoutY="304.0" prefHeight="200.0" prefWidth="360.0" />
-      <ListView fx:id="listhis" layoutX="63.0" layoutY="304.0" prefHeight="182.0" prefWidth="200.0" />
-      <AnchorPane layoutY="-5.0" prefHeight="80.0" prefWidth="779.0" style="-fx-background-color: #3366FF;">
-         <children>
-            <Label contentDisplay="CENTER" layoutX="231.0" prefHeight="102.0" prefWidth="346.0" text="Từ điển Anh Việt" textAlignment="CENTER" textFill="#f8cd55">
-               <font>
-                  <Font name="Cambria Bold Italic" size="43.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <Button layoutY="97.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="25.0" prefWidth="60.0" text="add" />
-      <Button layoutX="60.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="dele" />
-      <Button layoutX="120.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="api" />
-      <Button layoutX="180.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="search">
+   <children>
+    <Button layoutX="405.0" layoutY="190.0" mnemonicParsing="false" onAction="#search" onMouseClicked="#addHistory" prefHeight="60.0" prefWidth="102.0" text="search" />
+      <Button layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Word">
          <font>
             <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-    </children>
+         </font></Button>
+      <Button layoutX="60.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToSearchText" prefHeight="25.0" prefWidth="60.0" text="Text" />
+      <Button layoutX="120.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToAdd" prefHeight="25.0" prefWidth="60.0" text="Add" />
+      <Button layoutX="180.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToDelete" prefHeight="25.0" prefWidth="60.0" text="Delete" />
+      <TextArea fx:id="outPut" layoutX="331.0" layoutY="303.0" prefHeight="200.0" prefWidth="271.0" />
+      <TextField fx:id="inPut" layoutX="104.0" layoutY="179.0" prefHeight="60.0" prefWidth="212.0" />
+      <ImageView fitHeight="102.0" fitWidth="779.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/logo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="542.0" layoutY="179.0" mnemonicParsing="false" onAction="#texttospeech" prefHeight="60.0" prefWidth="95.0" text="speech" />
+   </children>
 </AnchorPane>
