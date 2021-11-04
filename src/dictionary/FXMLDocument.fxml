@@ -37,9 +37,9 @@
          <font>
             <Font size="16.0" />
          </font></TextArea>
-      <TextField fx:id="inPut" layoutX="60.0" layoutY="230.0" prefHeight="60.0" prefWidth="192.0">
+      <TextField fx:id="inPut" layoutX="60.0" layoutY="230.0" prefHeight="60.0" prefWidth="192.0" promptText="Enter your keyword ...">
          <font>
-            <Font size="16.0" />
+            <Font name="System Italic" size="16.0" />
          </font></TextField>
       <ImageView fitHeight="102.0" fitWidth="779.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -48,12 +48,12 @@
       </ImageView>
       <Button layoutX="267.0" layoutY="308.0" mnemonicParsing="false" onAction="#texttospeech" opacity="0.0" prefHeight="60.0" prefWidth="95.0" />
       <ListView fx:id="listHistory" layoutX="60.0" layoutY="308.0" prefHeight="200.0" prefWidth="192.0" />
-      <Label layoutX="114.0" layoutY="178.0" prefHeight="52.0" prefWidth="109.0" text="English" textFill="#e8bf79">
+      <Label layoutX="114.0" layoutY="178.0" prefHeight="52.0" prefWidth="109.0" text="English" textFill="#ecd541">
          <font>
             <Font name="System Bold Italic" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="413.0" layoutY="178.0" prefHeight="52.0" prefWidth="155.0" text="Vietnamese" textFill="#e8bf79">
+      <Label layoutX="413.0" layoutY="178.0" prefHeight="52.0" prefWidth="155.0" text="Vietnamese" textFill="#ecd541">
          <font>
             <Font name="System Bold Italic" size="25.0" />
          </font>
