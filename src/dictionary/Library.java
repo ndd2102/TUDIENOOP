@@ -84,6 +84,7 @@ public class Library {
 
     public int binSearch(String data) {
         data = data.toLowerCase();
+        data = data.trim();
         int left = 0;
         int right = key.size() - 1;
         while (left < right) {
@@ -101,6 +102,7 @@ public class Library {
     }
 
     public String searchWord(String data) {
+        data = data.trim();
         data = data.toLowerCase();
         int k = binSearch(data);
         if (k < 0) {
@@ -111,6 +113,7 @@ public class Library {
     }
 
     public boolean addWord(String data, String value) {
+        data = data.trim();
         data = data.toLowerCase();
         int k = binSearch(data);
         if (k >= 0 || value.length() == 0) {
@@ -132,6 +135,7 @@ public class Library {
     }
 
     public boolean deleteWord(String data) {
+        data = data.trim();
         data = data.toLowerCase();
         int k = binSearch(data);
         if (k < 0) {

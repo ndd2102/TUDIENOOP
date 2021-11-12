@@ -10,6 +10,7 @@ import static dictionary.translate.translate;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Vector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -74,8 +75,23 @@ public class TextMenuController implements Initializable {
 
     @FXML
     private void searchText(ActionEvent event) throws IOException {
-        String r = translate("en", "vi", inPutText.getText());
-        outPutText.setText(r);
+         String str = "";
+        String r = "";
+        Vector<String> text = new Vector<>();
+        String s = inPutText.getText();
+        for (int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) == '\n' || i == s.length() - 1 ) {
+               text.add(str);
+               str = "";
+            } else {
+                str += s.charAt(i);
+            }
+        }
+        for (int i = 0; i < text.size(); i++) {
+            r += translate("en", "vi", text.get(i));
+            r += '\n';
+        }
+         outPutText.setText(r);
     }
 
     @FXML
